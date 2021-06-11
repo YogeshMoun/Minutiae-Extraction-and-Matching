@@ -1,0 +1,5 @@
+1. https://www.researchgate.net/post/How-to-find-FRR-and-FAR-for-biometric-identification-using-retina#:~:text=FAR%20%3D%20FPR%20%3D%20FP%2F(FP,scores%20falling%20below%20your%20threshold.
+2. https://www.intechopen.com/
+3. http://www.researchinventy.com/papers/v3i6/I036056062.pdf
+4. https://www.researchgate.net/publication/299023294_Spurious_Fingerprint_Minutiae_Detection_Based_on_Multiscale_Directional_Information
+5. https://www.recogtech.com/en/knowledge-base/security-level-versus-user-convenience

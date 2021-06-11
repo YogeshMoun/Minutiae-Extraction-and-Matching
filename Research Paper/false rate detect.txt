@@ -1,0 +1,82 @@
+A system’s false
+match rate (FMR) and false nonmatch
+rate (FNMR) depend on the operating
+threshold; a large threshold score leads
+to a small FMR at the expense of a high
+FNMR. For a given fingerprint matching system, it is impossible to reduce
+both these errors simultaneously
+
+false positive identification
+rate (FPIR) 
+FPIR = 1 - (1 - FMR)N, where N is
+the number of users enrolled in the
+system.
+
+Lets assume you have a biometric evaluation system that assigns all authentication attempts a 'score' between closed 
+interval [0, 1]. 0 means no match at all and 1 means a full match. If the threshold is set to 0, then all the users 
+including the genuine (positive) and the impostors (negative) are authenticated. If you threshold is set to 1 then there 
+is a high risk that no one may be authenticated. Therefore, in realtime systems the threshold is kept somewhere between 
+0 and 1. So, this threshold setting can sometimes may not authenticate the genuine users, which is called FRR 
+(False Reject Rate) but may also authenticate the imposters, which is given by FAR (False Accept Rate).
+Here, FP: False positive, FN: False Negative, FN: True Negative and TP: True Positive
+FAR is calculated as a fraction of negative scores exceeding your threshold.
+FAR = imposter scores exceeding threshold/all imposter scores.
+imposter scores exceeding threshold = FP
+all imposter scores = FP+TN
+FAR = FPR = FP/(FP+TN)
+FRR is calculated as a fraction of positive scores falling below your threshold.
+FRR = genuines scores exceeding threshold/all genuine scores
+genuines scores exceeding threshold = FN
+all genuine scores = TP+FN
+FRR = FNR = FN/(TP+FN)
+
+
+FAR is calculated as a fraction of impostor scores exceeding your threshold.
+
+FRR is calculated as a fraction of genuine scores falling bellow your threshold.
+
+Example: We have a fingerprint system. In order to evaluate a performance of any biometric system, we need to gather a 
+database. Assume, that we have done that and the database consists of 10 legitimate users (USER_1-USER_10) and each 
+user provided his finger 10 times (10x10 = 100 images in total). Lets assume, that single image is sufficient for 
+template creation. You select a user (e. g. USER_1) and one his fingerprint image and create the template. The rest 
+of his images you use to verify the fingerprint and you receive 9 genuine scores. All images of other users you use 
+as a impostors and you receive 90 impostor scores. You repeat the template generation for all images and all users 
+and in total you receive 900 genuine scores and 9000 impostor scores. These scores are usually used to generate so 
+called ROC curves to choose the best threshold suting your problem. If you have chosen a threshold, you can calculate
+ the FAR and FRR using the definition I stated above.
+
+Lets assume, that we have chosen as threshold 0.7 and 100 impostor scores exceed the threshold and 50 genuine scores 
+fall below the threshold.
+FAR =imposter scores exceeding your threshold / all imposter scores  ==100/9000 ==0.011
+FRR = genuine scores falling bellow your threshold / all genuine scores   ==50/900 ==0.056
+So FAR = 1.1% and FRR = 5.6%.
+
+TAR = 1−FAR
+TRR = 1−FRR
+
+
+
+Assuming you got dissimilarity score normalized between 0 to1.
+For any score threshold value (say s), you have to calculate
+[a] Number of genuine matching having score more than s = False Reject (FR)
+[b] Number imposter matching equal to or less than s = False Accept (FA)
+So, for current threshold (s) : 
+FRR=FR/Total Genuine Matching
+FAR=FA / Total Imposter Matching
+In this way one can compute FAR and FRR for all s in {0 to 1} at an step of say 0.0001. Finally, plot FAR and FRR w.r.t 
+to the threshold value, which is considered as ROC curve.
+
+First minutiae tables are constructed for both probe and gallery fingerprint as shown in
+Fig.3.3. In the table 𝑋, 𝑌 represents the coordinates of each minutiae, 𝑇 represents
+orientation 𝜃 and 𝐷 represents the minutiae quality. These tables containing all
+minutiae parameters are then passed to the minutiae matcher for generating the
+scores. S(P1,P2) represents scores obtained from genuine matach where 𝑃1 and
+𝑃2 are the fingerprints from same person. 𝑆(𝐺1, 𝐺2) represents scores obtained from
+imposter matach where 𝐺1 and 𝐺2 are the fingerprints from different persons. As
+larger the matching score, the fingerprints are more likely from the same person.
+
+False Acceptance Rate (FAR): the percentage of identification instances in which unauthorised persons are incorrectly accepted.
+False Rejection Rate (FRR): the percentage of identification instances in which authorised persons are incorrectly rejected.
+ 
+ 
+

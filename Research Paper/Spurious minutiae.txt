@@ -1,0 +1,26 @@
+Fingerprint minutiae extraction is a critical issue in fingerprint recognition. 
+Both missing and spurious minutiae hinder the posterior matching process. 
+Spurious minutiae are more frequent than missing ones, but they can be removed by post-processing. 
+In this work, we study the usage of a state-of-the-art minutiae extractor, MINDTCT, and we analyze its major drawback: 
+the presence of spurious minutiae lying on the borders of the fingerprint and out its area. In order to overcome this 
+problem, we use two different filtering approaches based on the convex hull of the minutiae and the segmentation of the
+ fingerprint. We will analyze, supported by an exhaustive experimental study, the efficacy of these methods to remove 
+spurious minutiae. We will evaluate both the effect on different state-of-the-art matchers and the goodness of the 
+minutiae, by comparing the extracted minutiae with the ground-truth ones. For this purpose, the experiments have been 
+performed on several databases of both real and synthetic fingerprints. The filters used allow us to remove spurious 
+minutiae, resulting in more accurate results even in the case of robust matchers. The EER is improved up to 2% for 
+good quality databases, and up to 25% for FVC databases. Additionally, the matching time is accelerated, since less 
+minutiae are processed, attaining up to a 60% runtime reduction for the tested database.
+
+2.1 Procedures to remove false minutiae
+As mentioned earlier, first the minutiae points which are close to the border (within 10 pixels) are ignored to
+avoid extracting false minutiae. Initially some simpler and compact set of fuzzy rules are proposed for removing
+false minutiae as described below:
+Rule1: IF the distance between termination and bifurcation is less than D,
+THEN remove both the minutiae.
+Rule 2: IF the distance between two bifurcations is less than D,
+THEN remove both the minutiae.
+Rule 3: IF the distance between two terminations is less than D,
+THEN remove both the minutia.
+The average inter ridge distance (D) between two neighboring ridges which is computed by the formula
+D=sum of all pixels in the row whose value is one / row length
