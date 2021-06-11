@@ -36,5 +36,5 @@ To install the PyEER package you only need to type into a terminal the following
 pip install pyeer
 ## Input file formats
 Genuine match scores and impostor match scores must be provided in separated files one score per line. Each line can have any number of columns but the scores must be in the last column. Additionally, impostor match scores can be provided in a different format which explained next
-
+## Evaluation
 The evaluation of 1:1 biometric authentication systems is usually done by estimating False Accept Rate (FAR) and False Reject Rate (FRR). Using these estimates, a ROC curve is generated. Compared to the standard ROC curve, where we plot the True Positive Rate (TPR) against the False Positive Rate (FAR), in the domain of biometric sytems, instead of TPR, we plot FRR (or 1 - TPR).
