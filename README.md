@@ -56,6 +56,8 @@ The evaluation of 1:1 biometric authentication systems is usually done by estima
 ![image](https://github.com/YogeshMoun/Minutiae-Extraction-and-Matching/blob/main/result/roc_1.png)
 
 # Execution of code :
+Firstly , you have to change path of dataset inside the utils.py acc. to your dataset location.
+
 **python main.py 101_2.tif**
 
 Image name should be in [101-110]_{2|6}.tif , Because these images are in test set , so you can test these images and search into the database otherwise give error !
