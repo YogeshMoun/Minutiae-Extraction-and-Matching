@@ -1,0 +1,10 @@
+git init
+git add .
+git config --global user.email "yogeshmoun@gmail.com"
+git config --global user.name "YogeshMoun"
+git commit -m "fist commit"
+git remote add origin https://github.com/YogeshMoun/Minutiae-Extraction-and-Matching.git
+git remote -v
+git branch -M main
+git push -u origin main
+
