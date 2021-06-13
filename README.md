@@ -38,7 +38,7 @@ For the authentication scenairo, the data structure for training is slightly dif
 ![image](https://github.com/YogeshMoun/Minutiae-Extraction-and-Matching/blob/main/result/matched_1.png)
 
 # Data :
-The data consists of images of fingerprints, provided as part of [FVC2002](http://bias.csr.unibo.it/fvc2002/download.asp): the Second International Competition for Fingerprint Verification Algorithms. There are 4 available datasets and we chose to work with the second dataset: DB2, which consists of 80 images of fingerprints that belong to 10 different individuals (or classes), which gives 8 images per person.
+The data consists of images of fingerprints, provided as part of [FVC2002](http://bias.csr.unibo.it/fvc2002/download.asp): the Second International Competition for Fingerprint Verification Algorithms. There are 4 available datasets and we chose to work with the second dataset: DB1, which consists of 80 images of fingerprints that belong to 10 different individuals (or classes), which gives 8 images per person.
 # PyEER :
 PyEER is a python package intended for biometric systems performance evaluation but it can be used to evaluate binary classification systems also. It has been developed with the idea of providing researchers and the scientific community in general with a tool to correctly evaluate and report the performance of their systems.
 This package is used for computing the EER, as well as the FAR and FRR later.
